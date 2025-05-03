@@ -5,14 +5,14 @@ A Python-based pipeline project that processes shared travel expenses and calcul
 ---
 
 ## 📁 File Structure
-
+```
 main.py
 ├── expense_loader.py
 └── payer_normalizer.py
 └── amount_splitter.py
 └── balance_calculator.py
 └── receipt_generator.py
-
+```
 ---
 
 ## 🧩 Module Descriptions
