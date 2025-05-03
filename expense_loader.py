@@ -6,15 +6,14 @@ def load_expenses():
         {"payer": "bob", "amount": 800.0, "participants": ["Bob", "alice"]},
         {"payer": "CHARLIE", "amount": 300.0, "participants": ["Charlie", "Alice", "Bob"]},
         {"payer": "ALICE", "amount": 700.0, "participants": ["Alice", "Charlie"]},
-        {"payer": "Bob", "amount": -500.0, "participants": ["Bob", "Charlie"]}  # invalid
+        {"payer": "Bob", "amount": -500.0, "participants": ["Bob", "Charlie"]} 
     ]
 
-    # Filter out invalid entries
     cleaned = []
     for entry in raw_expenses:
-        if entry.get("amount", 0) <= 0 or not entry.get("participants"):
+        if entry.get("amount", 0) > 0 or entry.get("participants"):
             print(f"⚠️ Skipping invalid entry: {entry}")
-            continue
-        cleaned.append(entry)
+            
+        cleaned.append(entry["payer"])
 
     return normalize_payers(cleaned)

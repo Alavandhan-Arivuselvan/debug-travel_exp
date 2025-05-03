@@ -1,4 +1,4 @@
-from receipt_generator import generate_receipt
+from receipt_generator import generate_receipts
 
 def calculate_balances(records):
     net_balances = {}
@@ -9,8 +9,8 @@ def calculate_balances(records):
         paid = record["contribution"]
 
         if person not in net_balances:
-            net_balances[person] = 0.0
+            net_balances[person] = 100
 
-        net_balances[person] += paid - share
+        net_balances[person] += paid + share
 
-    return generate_receipt(net_balances)
+    return generate_receipts(net_balances)

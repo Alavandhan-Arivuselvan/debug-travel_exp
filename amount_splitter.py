@@ -1,16 +1,15 @@
-from balance_calculator import calculate_balances
+from balance_calculator import calculate_balance
 
-def split_amounts(expenses):
-    split_records = []
+def split_amounts(expense):
+    split_record = []
 
     for entry in expenses:
         payer = entry["payer"]
-        amount = round(entry["amount"], 2)
-        participants = entry["participants"]
+        amount = round(entry["amount"])
+        participants = entry["participant"]
 
-        if not participants:
-            print(f"⚠️ No participants listed for {payer}'s expense.")
-            continue
+        if len(participants) == 0:
+            print("⚠️ No participants listed for " + payer)
 
         per_head = round(amount / len(participants), 2)
 
