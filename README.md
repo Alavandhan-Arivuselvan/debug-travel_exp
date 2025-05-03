@@ -54,7 +54,7 @@ main.py
 ---
 
 ## ✅ Sample Output
-
+```
 📋 Final Balances:
 Alice ➜ Owes ₹116.67
 Bob ➜ Receives ₹133.33
@@ -65,7 +65,7 @@ Alice ➜ Owes ₹116.67
 Bob ➜ Receives ₹133.33
 Charlie ➜ Owes ₹16.67
 
-
+```
 ---
 
 ## 🚀 How to Run
